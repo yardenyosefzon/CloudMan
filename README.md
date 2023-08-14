@@ -7,3 +7,5 @@ To run the project, clone the repository, install the necessary dependencies, an
 for the frontend and "nodemon index" for the backend.
 
 Enjoy!
+
+Note: Just wanted to mention that when I work on real websites, I make sure not to share the .env file on a public repository.

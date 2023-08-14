@@ -12,7 +12,6 @@ app.post('/api/weatherData', async (req, res) => {
       const {city} = req.body
       const response = await axios.get(`http://api.weatherapi.com/v1/current.json?key=90e9aa3641dd4b31a09190503231208&q=${city}&aqi=no`);
       const data = response.data;
-      console.log(data)
       res.send(data);
       
     } catch (error) {

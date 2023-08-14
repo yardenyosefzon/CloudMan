@@ -38,14 +38,12 @@ function Home() {
         }
       })
       .then((data) => {
-        console.log(data.current)
         setCurrentWeatherDetails(data.current);
         setLocationDetails(data.location);
         inputRef.current.value=""
         setFoundCity(true)
       })
-      .catch((error) => {
-        console.error('Error fetching weather:', error);
+      .catch(() => {
         setFoundCity(false)
         inputRef.current.value=""
       });

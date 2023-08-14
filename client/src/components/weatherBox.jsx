@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 
 function WeatherBox({city, locationDetails, currentWeatherDetails, foundcity}) {
   
@@ -15,7 +15,7 @@ function WeatherBox({city, locationDetails, currentWeatherDetails, foundcity}) {
                 <p className='country'>
                   {locationDetails.country}
                 </p>
-                <img className='image' src={`${currentWeatherDetails.condition.icon}`} alt="" />
+                <img className='image' src={`${currentWeatherDetails.condition.icon}`} alt="weather-icon"/>
               </div>
             </div>
             <div className='degrees-container'>
@@ -46,7 +46,7 @@ function WeatherBox({city, locationDetails, currentWeatherDetails, foundcity}) {
             </div>
           </div>
           <div className="mr-cloud-container">
-            <img className="mr-cloud" width={110} height={84.8} src={foundcity? '/pics/happy cloud.jpg' : '/pics/sad cloud.png'}></img>
+            <img className="mr-cloud" width={110} height={84.8} src={foundcity? '/pics/happy cloud.jpg' : '/pics/sad cloud.png'} alt="Mr-cloud"></img>
             <p className='mr-cloud-sentence'>{foundcity ? `The weather in ${locationDetails.name}` : `Did not find this one. Try again!`}</p>
           </div>
 

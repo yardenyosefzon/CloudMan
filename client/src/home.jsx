@@ -1,3 +1,4 @@
+import WeatherBox from 'components/weatherBox';
 import React, { useEffect, useRef, useState } from 'react';
 
 function Home() {
@@ -13,7 +14,10 @@ function Home() {
     temp_c: "",
     precip_in: "",
     humidity: "",
-    wind_kph: ""
+    wind_kph: "",
+    condition: {
+      icon: ""
+    }
   })
 
   const handleWeatherFetch = (e) => {
@@ -34,6 +38,7 @@ function Home() {
         }
       })
       .then((data) => {
+        console.log(data.current)
         setCurrentWeatherDetails(data.current);
         setLocationDetails(data.location);
         inputRef.current.value=""
@@ -45,7 +50,6 @@ function Home() {
         inputRef.current.value=""
       });
   };
-
   useEffect(() => {
     handleWeatherFetch()
   }, [])
@@ -78,53 +82,7 @@ function Home() {
               </div>
             </form>
           </div>
-        <div className="weather-info-container">
-          <div className="weather-info">
-            <div className='location-container'>
-              <div className='name-container'>
-                <p className='name'>
-                  {locationDetails.name}
-                </p>
-              </div>
-              <div className='country-container'>
-                <p className='country'>
-                  {locationDetails.country}
-                </p>
-              </div>
-            </div>
-            <div className='degrees-container'>
-              <p className='degrees'>
-                {currentWeatherDetails.temp_c+'°'}
-              </p>
-            </div>
-            <div className='other-weather-details'>
-              <div className='precipitation-container'>
-                <label>Precipitation</label>
-                <p className='precipitation'>
-                  {currentWeatherDetails.precip_in}
-                </p>
-              </div>
-              <div className='humidity-container'>
-              <label>Humidity</label>
-                <p className='humidity'>
-                  {currentWeatherDetails.humidity}
-                </p>
-              </div>
-              <div className='wind-container'>
-              <label>Wind</label>
-                <p>
-                  {currentWeatherDetails.wind_kph}
-                </p>
-              </div>
-              
-            </div>
-          </div>
-          <div className="mr-cloud-container">
-            <img className="mr-cloud" width={110} height={84.8} src={foundcity? '/pics/happy cloud.jpg' : '/pics/sad cloud.png'}></img>
-            <p className='mr-cloud-sentence'>{foundcity ? `The weather in ${locationDetails.name}` : `Did not find this one. Try again!`}</p>
-          </div>
-
-        </div>
+          <WeatherBox city={city} locationDetails={locationDetails} currentWeatherDetails={currentWeatherDetails} foundcity={foundcity}/>
       </div>
     </div>
   );

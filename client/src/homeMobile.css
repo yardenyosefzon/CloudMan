@@ -1,0 +1,60 @@
+@media (max-width: 768px) {
+    .home-page-container{
+      font-size: 1.2rem;
+    }
+    .open-cloud-1-container{
+      margin-right: -120vw;
+    }
+    .open-cloud-2-container {
+      margin-left:-120vw;
+    }
+    .cloudman-header{
+      font-size: 3em;
+      padding: 4vw;
+      padding-left: 6vw;
+      padding-right: 6vw;
+      animation: cloudman-header-mobile 0.5s 1s forwards;
+    }
+    @keyframes cloudman-header-mobile {
+      to{
+        opacity: 0;
+      }
+    }
+    .content-container{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      z-index: 2;
+      gap: 0;
+    }
+    .sentence-input-container{
+      align-items: center;
+      justify-content: center;
+      height: 50%;
+    }
+    .sentence-container{
+      text-align: center;
+      width: 100%;
+    }
+    .form{
+      flex-direction: row;
+      gap: 10px;
+    }
+    .weather-info-container{
+      flex-direction: column-reverse;
+      align-items: center;
+      height: 100%;
+      width: 80vw;
+      border-radius: 10px;
+      margin-bottom: 15px;
+      margin-top:0
+    }
+    .mr-cloud-container{
+      align-items: center;
+    }
+    .mr-cloud{
+      width: 90px;
+    }
+  }

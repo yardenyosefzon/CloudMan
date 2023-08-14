@@ -1,0 +1,67 @@
+@media (min-width: 769px) and (max-width: 1023px) {
+    .home-page-container{
+      font-size: 2.5rem;
+    }
+    .open-cloud-1-container{
+      margin-right: -120vw;
+    }
+    .open-cloud-2-container {
+      margin-left:-120vw;
+    }
+    .cloudman-header{
+      padding: 2vw;
+      padding-left: 4vw;
+      padding-right: 4vw;
+    }
+    .content-container{
+      align-self: self-end;
+      flex-direction: column;
+      align-items: center;
+      height: 90vh;
+      width: 100vw;
+      z-index: 2;
+      gap: 0;
+    }
+    .sentence-input-container{
+      align-items: center;
+      justify-content: center;
+    }
+    .sentence-container{
+      width: 100%;
+      text-align: center;
+    }
+    .form{
+      flex-direction: row;
+      gap: 10px;
+    }
+    .weather-info-container{
+      flex-direction: column-reverse;
+      align-items: center;
+      height: 100%;
+      width: 90%;
+      border-radius: 10px;
+      margin-bottom: 15px;
+    }
+    .form-button{
+      border-radius: 5px;
+      background-color: rgb(186, 227, 255);
+      border: none;
+      font-size: 0.8em;
+    }
+    .degrees-container{
+      display: flex;
+      width: 100%;
+      justify-content: center;
+      font-weight: 900;
+      margin-left: 10px;
+    }
+    .mr-cloud-container{
+      position: relative;
+      display: flex;
+      width: 100%;
+      margin-top: 4px;
+    }
+    .mr-cloud{
+      width: 110px;
+    }
+  }
